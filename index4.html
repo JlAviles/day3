@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .rollovable {
+            border-radius: 5px;
+            transition: border-radius 1.25s ease-out, background 0.25s ease-in, transform 0.25s ease-in;
+            background: grey;
+            transition-delay: 0.5s;
+        }
+
+        .rollovable:hover {
+            transition: border-radius 1.25s ease-in, background 0.25s ease-in, transform 0.25s ease-in;
+            border-radius: 10px;
+            background: #2e9ab1;
+            transform: rotate(20deg);
+            transition-delay: 0.5s;
+        }
+
+        .rollovable.crazy:hover {
+            background: #b13a2a;
+            transform: rotate(-20deg);
+        }
+
+        /* nice rotating cube https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate3d */
+
+        div {
+            height: 50px;
+            width: 50px;
+            background: red;
+        }
+
+        div:hover {
+            background: blue;
+            transform: rotate3d(1, 1, 1, 45deg);
+            transition: all 0.5s  linear;
+        }
+    </style>
+</head>
+
+<body>
+    <div>Hola Edu!!</div>
+    <!-- <button class="rollovable not-crazy">Click me!</button>
+    <button class="rollovable crazy">Click me!</button>
+
+    <div class="rollovable not-crazy">Yeah</div>
+    <div class="rollovable crazy">🐖</div> -->
+
+</body>
+
+</html>

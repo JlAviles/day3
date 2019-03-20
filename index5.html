@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        img {
+            height: 200px;
+            position: relative;
+        }
+        button {
+            position: absolute;
+            top: 50px;
+            font-size: 24px;
+            right: 0;
+        }
+
+        .active {
+            animation-name: bouncyLogo;
+            animation-duration: 2s;
+            animation-iteration-count: 1;
+        }
+
+        @keyframes bouncyLogo {
+            0% {
+                left: 0;
+                transform: rotate(0deg);
+                
+            }
+
+            50% {
+                left: 400px;
+                transform: rotate(90deg);
+                height: 500px;
+            }
+
+            100% {
+                left: 0px;
+                transform: rotate(0deg);
+            }
+        }
+    </style>
+    
+</head>
+<body>
+    <button id="animationStart">Click me!</button>
+    <img src="https://cdn-images-1.medium.com/max/1200/1*69RcxrWXuk385lSxkIYYLA.png" alt="">
+
+    <script>
+        var counter = 0
+
+        document.getElementById("animationStart").onclick = function () {
+            counter++
+
+            if (counter % 2 === 1) {
+                document.querySelector("img").className = "active"
+            }   else {
+                document.querySelector("img").className = ""
+            }
+        }
+    </script>
+</body>
+</html>
